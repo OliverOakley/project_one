@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Pepsi Purchases</title>
+    </head>
+    <body>
+        <h1>Purchases List</h1>
+        <p>All Current Purchases</p>
+        <div>
+            <table style="width:50%">
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Product ID</th>
+                </tr>
+                {% for r in purchase %}
+                <tr>
+                    <td>{{ r.customer_id }}</td> 
+                    <td>{{ r.product_id }}</td>
+                    <td> <a href ="/deletepurchase/{{r.id}}">Delete This Purchase</a></td>
+                </tr> {% endfor %}
+            </table>
+        <br> <a href="{{url_for('home')}}">Cancel</a>
+    </body>
+</html>

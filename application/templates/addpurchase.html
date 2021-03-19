@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Pepsi Purchases</title>
+    </head>
+    <body>
+        <div class='form'>
+            <form method='POST' action=''>
+                {{ form.hidden_tag() }}
+                {{ form.customer_id.label }} {{ form.customer_id }}
+                <br>
+                {{ form.product_id.label }} {{ form.product_id }}
+                <br>
+                {{ form.submit }}
+            {{ message }}
+            </form>
+        </div>
+        <br> <a href="{{url_for('home')}}">Cancel</a>
+    </body>
+</html>
